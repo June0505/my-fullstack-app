@@ -1,0 +1,119 @@
+#main-top-wrapper {
+    padding: 100px 0 60px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fb 100%);
+}
+
+.main-top-container {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.main-top-title {
+    color: #1a1a1a;
+    text-align: center;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: -0.8px;
+    white-space: pre-wrap;
+}
+
+.main-top-contents-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+}
+
+.main-top-contents-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #222;
+}
+
+.main-top-contents {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+/* 등장 애니메이션 */
+.fade-slide {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlide 0.8s ease forwards;
+}
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#main-bottom-wrapper {
+    padding: 60px 0 80px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(245, 245, 245, 1);
+}
+
+.main-bottom-container {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.main-bottom-title {
+    color: #1a1a1a;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.main-bottom-contents-box {
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    gap: 24px;
+}
+
+.main-bottom-current-contents {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.main-bottom-popular-card {
+    padding: 28px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.main-bottom-popular-card-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 200%;
+    color: #222;
+}
+
+.main-bottom-popular-card-contents {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.main-bottom-pagination-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}

@@ -1,0 +1,129 @@
+.board-list-item {
+    padding: 20px 24px;
+
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eeeeee;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.board-list-item:hover {
+    background-color: #fcfcfc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    border-color: #dddddd;
+}
+
+.board-list-item-main-box {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.board-list-item-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.board-list-item-profile-box {
+    width: 32px;
+    height: 32px;
+
+    border: 2px solid #e0e0e0;
+    border-radius: 50%;
+}
+
+.board-list-item-profile-image {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.board-list-item-write-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.board-list-item-nickname {
+    color: #333333;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.board-list-item-write-date {
+    color: #888888;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.board-list-item-middle {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.board-list-item-title {
+    color: #1a1a1a;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 140%;
+}
+
+.board-list-item-content {
+    color: #555555;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-height: 42px;
+}
+
+.board-list-item-bottom {
+    margin-top: 5px;
+}
+
+.board-list-item-counts {
+    color: #777777;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+.board-list-item-image-box {
+    width: 160px;
+    height: 140px;
+    min-width: 160px;
+    min-height: 140px;
+    overflow: hidden;
+}
+
+.board-list-item-image {
+    border-radius: 8px;
+
+    width: 100%;
+    height: 100%;
+
+    background-position: center center;
+    background-size: cover;
+}
