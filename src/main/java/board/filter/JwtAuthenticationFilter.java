@@ -31,7 +31,6 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         String requestUri = request.getRequestURI();
         System.out.println("Request Path = " + requestUri);
 
-        // ⭐️ 추가된 코드: /api/v1/file 요청에 대해서는 필터링 로직을 아예 건너뛰고 다음 체인으로 넘깁니다.
         if (requestUri.startsWith("/api/v1/file")) {
             filterChain.doFilter(request, response);
             return;
@@ -90,13 +89,9 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         return token;
     }
 
-    /**
-     * shouldNotFilter는 사용하지 않고, doFilterInternal 내에서 명시적으로 제외 처리합니다.
-     */
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
-        // doFilterInternal에서 처리하므로 여기서 특별히 제외할 경로는 없음.
-        // 하지만 기존 코드를 유지하여 /auth, /search 경로에 대한 필터링 제외도 보장합니다.
+
         String path = request.getRequestURI();
         return path.startsWith("/api/v1/auth") ||
             path.startsWith("/api/v1/search");
